@@ -59,6 +59,33 @@ flowchart TD
     Goal -->|設定完了| Home
     Logout --> Login
 ```
+## DB設計
+
+### usersテーブル
+
+| カラム名 | 型 | 内容 |
+| --- | --- | --- |
+| id | INT | ユーザーID |
+| name | VARCHAR(50) | ユーザー名 |
+| password | VARCHAR(255) | パスワード |
+| created_at | DATETIME | 登録日時 |
+
+### diet_recordsテーブル
+
+| カラム名 | 型 | 内容 |
+| --- | --- | --- |
+| id | INT | 記録ID |
+| user_id | INT | ユーザーID |
+| record_date | DATE | 記録日 |
+| weight | DECIMAL(5,2) | 体重 |
+| bmi | DECIMAL(4,1) | BMI |
+| breakfast | VARCHAR(255) | 朝食 |
+| lunch | VARCHAR(255) | 昼食 |
+| dinner | VARCHAR(255) | 夕食 |
+| exercise | VARCHAR(255) | 運動内容 |
+| memo | TEXT | メモ |
+| created_at | DATETIME | 登録日時 |
+
 ## 機能
 
 - ユーザー登録
@@ -69,6 +96,7 @@ flowchart TD
 - 目標体重管理
 - 進捗確認
 - ユーザーごとの記録管理
+'''
 
 ## 使用技術
 
