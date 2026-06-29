@@ -86,6 +86,24 @@ flowchart TD
 | memo | TEXT | メモ |
 | created_at | DATETIME | 登録日時 |
 
+'''
+## クラス構成
+
+| 種類 | クラス名 | 役割 |
+| --- | --- | --- |
+| Servlet | LoginServlet | ログイン処理を行う |
+| Servlet | LogoutServlet | ログアウト処理を行う |
+| Servlet | RegisterServlet | ユーザー登録処理を行う |
+| Servlet | RecordServlet | ダイエット記録の登録・一覧表示を行う |
+| JavaBeans | User | ユーザー情報を保持する |
+| JavaBeans | DietRecord | ダイエット記録の情報を保持する |
+| DAO | UserDAO | ユーザー情報をDBに登録・検索する |
+| DAO | DietRecordDAO | ダイエット記録をDBに登録・取得する |
+| Logic | LoginLogic | ログイン判定を行う |
+| Logic | RecordLogic | 入力チェックやBMI計算を行う |
+
+'''
+
 ## 機能
 
 - ユーザー登録
