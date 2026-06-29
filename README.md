@@ -1,3 +1,4 @@
+
 # Diet Manager（ダイエット管理アプリ）
 
 ## 概要
@@ -69,7 +70,6 @@ flowchart TD
 | name | VARCHAR(50) | ユーザー名 |
 | password | VARCHAR(255) | パスワード |
 | created_at | DATETIME | 登録日時 |
-
 ### diet_recordsテーブル
 
 | カラム名 | 型 | 内容 |
@@ -86,7 +86,6 @@ flowchart TD
 | memo | TEXT | メモ |
 | created_at | DATETIME | 登録日時 |
 
-'''
 ## クラス構成
 
 | 種類 | クラス名 | 役割 |
@@ -102,7 +101,7 @@ flowchart TD
 | Logic | LoginLogic | ログイン判定を行う |
 | Logic | RecordLogic | 入力チェックやBMI計算を行う |
 
-'''
+
 
 ## 機能
 
@@ -114,7 +113,6 @@ flowchart TD
 - 目標体重管理
 - 進捗確認
 - ユーザーごとの記録管理
-'''
 
 ## 使用技術
 
