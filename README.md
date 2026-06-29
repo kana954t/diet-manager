@@ -70,6 +70,7 @@ flowchart TD
 | name | VARCHAR(50) | ユーザー名 |
 | password | VARCHAR(255) | パスワード |
 | created_at | DATETIME | 登録日時 |
+
 ### diet_recordsテーブル
 
 | カラム名 | 型 | 内容 |
@@ -86,6 +87,37 @@ flowchart TD
 | memo | TEXT | メモ |
 | created_at | DATETIME | 登録日時 |
 
+### テーブル作成SQL
+
+```sql
+CREATE DATABASE diet_manager
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_general_ci;
+
+USE diet_manager;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE diet_records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    record_date DATE NOT NULL,
+    weight DECIMAL(5,2) NOT NULL,
+    bmi DECIMAL(4,1),
+    breakfast VARCHAR(255),
+    lunch VARCHAR(255),
+    dinner VARCHAR(255),
+    exercise VARCHAR(255),
+    memo TEXT,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+```
 ## クラス構成
 
 | 種類 | クラス名 | 役割 |
