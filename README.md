@@ -25,6 +25,53 @@ flowchart TD
     Servlet --> JSP
     JSP --> Browser
 ```
+```mermaid
+flowchart TD
+    Browser["ブラウザ"]
+
+    LoginJsp["login.jsp"]
+    MainJsp["main.jsp"]
+    RecordJsp["record.jsp"]
+    ListJsp["recordList.jsp"]
+
+    LoginServlet["LoginServlet"]
+    LogoutServlet["LogoutServlet"]
+    RecordServlet["RecordServlet"]
+    DeleteServlet["DeleteRecordServlet"]
+
+    LoginLogic["LoginLogic"]
+    RecordLogic["RecordLogic"]
+
+    UserDAO["UserDAO"]
+    DietRecordDAO["DietRecordDAO"]
+
+    UserBean["User"]
+    DietRecordBean["DietRecord"]
+
+    MySQL[("MySQL")]
+
+    Browser --> LoginJsp
+    Browser --> MainJsp
+    Browser --> RecordJsp
+    Browser --> ListJsp
+
+    LoginJsp --> LoginServlet
+    LoginServlet --> LoginLogic
+    LoginLogic --> UserDAO
+    UserDAO --> MySQL
+
+    RecordJsp --> RecordServlet
+    RecordServlet --> RecordLogic
+    RecordLogic --> DietRecordDAO
+    DietRecordDAO --> MySQL
+
+    ListJsp --> RecordServlet
+    DeleteServlet --> DietRecordDAO
+
+    UserBean --> UserDAO
+    DietRecordBean --> DietRecordDAO
+```
+
 Javaで作成した体重管理アプリです。
 日々の体重とBMIを記録し、ダイエットの進捗を可視化することを目的としています。
 
