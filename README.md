@@ -1,7 +1,30 @@
 # Diet Manager（ダイエット管理アプリ）
 
 ## 概要
+## アーキテクチャ図
 
+```mermaid
+flowchart TD
+    User["ユーザー"]
+    Browser["ブラウザ"]
+    JSP["JSP<br>画面表示"]
+    Servlet["Servlet<br>リクエスト処理"]
+    Logic["Logic<br>入力チェック・BMI計算"]
+    DAO["DAO<br>データベース操作"]
+    DB[("MySQL<br>users / diet_records")]
+
+    User --> Browser
+    Browser --> JSP
+    JSP --> Servlet
+    Servlet --> Logic
+    Logic --> DAO
+    DAO --> DB
+    DB --> DAO
+    DAO --> Logic
+    Logic --> Servlet
+    Servlet --> JSP
+    JSP --> Browser
+```
 Javaで作成した体重管理アプリです。
 日々の体重とBMIを記録し、ダイエットの進捗を可視化することを目的としています。
 
