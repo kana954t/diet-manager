@@ -31,7 +31,34 @@ flowchart TD
     Servlet --> JSP
     JSP --> Browser
 ```
+## 画面遷移図
 
+```mermaid
+flowchart TD
+    Start["アプリ起動"]
+    Login["ログイン画面"]
+    Register["ユーザー登録画面"]
+    Home["ホーム画面"]
+    RecordForm["記録登録画面"]
+    RecordList["記録一覧画面"]
+    Goal["目標体重設定画面"]
+    Logout["ログアウト"]
+
+    Start --> Login
+    Login -->|ログイン成功| Home
+    Login -->|新規登録| Register
+    Register -->|登録完了| Login
+
+    Home --> RecordForm
+    Home --> RecordList
+    Home --> Goal
+    Home --> Logout
+
+    RecordForm -->|登録完了| RecordList
+    RecordList -->|戻る| Home
+    Goal -->|設定完了| Home
+    Logout --> Login
+```
 ## 機能
 
 - ユーザー登録
