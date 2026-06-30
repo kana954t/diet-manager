@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: "Yu Gothic", "Meiryo", "Hiragino Sans", sans-serif;
+    background: linear-gradient(135deg, #fff5f7 0%, #f7f3ff 50%, #f1fbff 100%);
+    color: #3f3a45;
+    text-align: center;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    max-width: 720px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 34px 28px;
+    border-radius: 24px;
+    box-shadow: 0 10px 24px rgba(180, 150, 170, 0.18);
+}
+
+h1 {
+    color: #ff7fa3;
+    font-size: 34px;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+}
+
+h2 {
+    color: #6d5b7b;
+    font-size: 22px;
+    margin-bottom: 26px;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+input,
+textarea {
+    width: 82%;
+    max-width: 430px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    border: 2px solid #f3d8e2;
+    border-radius: 16px;
+    background-color: #fffafd;
+    color: #3f3a45;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff9dbc;
+    box-shadow: 0 0 0 4px rgba(255, 157, 188, 0.18);
+}
+
+button {
+    margin-top: 16px;
+    background-color: #ff8fb1;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 999px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(255, 143, 177, 0.28);
+}
+
+button:hover {
+    background-color: #ff719d;
+}
+
+a {
+    color: #ff7fa3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 14px 0;
+}
+
+table {
+    width: 100%;
+    margin: 22px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+th {
+    background-color: #ffdce8;
+    color: #6d5b7b;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #f3d8e2;
+}
+
+.subtitle {
+    color: #9b8aa8;
+    font-size: 14px;
+    margin-top: -4px;
+    margin-bottom: 24px;
+}
+
+.table-area {
+    width: 100%;
+    overflow-x: auto;
+}
